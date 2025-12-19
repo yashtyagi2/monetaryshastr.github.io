@@ -9,9 +9,7 @@
     stellarnav.stellarNav({
       theme: 'light',
       breakpoint: 960,
-      position: 'right',
-      phoneBtn: '18009997788',
-      locationBtn: 'https://www.google.com/maps'
+      position: 'right'
     });
 
     //All Carousel active
@@ -346,5 +344,6 @@
 
 
 }(jQuery));
+
 
 
