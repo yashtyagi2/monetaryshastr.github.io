@@ -218,13 +218,13 @@
     var number3 = $("#number_3");
     facts.appear(function () {
       number1.animateNumber({
-        number: 147513
+        number: 183239
       }, 2200);
       number2.animateNumber({
-        number: 1341
+        number: 2017
       }, 2200);
       number3.animateNumber({
-        number: 20
+        number: 85
       }, 2200);
     }, {
       accX: 0,
@@ -344,6 +344,7 @@
 
 
 }(jQuery));
+
 
 
 
