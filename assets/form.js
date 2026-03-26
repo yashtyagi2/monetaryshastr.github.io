@@ -107,6 +107,19 @@ function validateSection(n) {
         radio("q-status", "status");
 
     }
+    if (n === 2) {
+
+        const g = document.getElementById("q-doubt");
+        const val = document.getElementById("doubt").value;
+
+        if (!val || val.trim() === "") {
+        g.classList.add("has-error");
+        valid = false;
+        } else {
+        g.classList.remove("has-error");
+        }
+
+    }
 
     if (n === 3) {
 
