@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Monetary Shastr Workshop Application</title>
+
+    <link rel="stylesheet" href="/assets/form.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@300;400;500&display=swap"
+        rel="stylesheet">
+
+</head>
+
+
+<body>
+
+    <!-- Progress bar -->
+    <div class="progress-bar-wrap">
+        <div class="progress-bar-fill" id="progress-fill" style="width:10%"></div>
+    </div>
+
+    <!-- Page header -->
+    <div class="page-header">
+
+        <div class="brand-logo">
+            <img src="/assets/logo.png" alt="Monetary Shastr Logo">
+        </div>
+        <div class="header-tag">Application Form</div>
+        <h1 class="header-title">Stock Market Workshop<br><em>Join the Discussion</em></h1>
+        <div class="header-seats">
+            <span class="seats-dot"></span>
+            Limited to 15 seats — applications close soon
+        </div>
+        <p class="header-desc">A small, focused session for curious learners who want real clarity on how equity markets
+            work. Not a course. Not a pitch. Just an honest discussion.</p>
+    </div>
+
+    <div class="container">
+
+        <form id="workshop-form">
+
+            <!-- Honeypot anti spam -->
+            <input type="text" name="company" id="company" style="display:none">
+
+            <!-- SECTION 1 -->
+            <div class="form-section active" id="section-1">
+
+                <div class="section-header">
+                    <div class="section-num">Section 1 of 3</div>
+                    <h2 class="section-title">Basic Information</h2>
+                    <p class="section-note">Just a few details so we know who we're speaking with.</p>
+                </div>
+
+                <div class="q-group" id="q-name">
+                    <label class="q-label">Your full name <span class="q-required">*</span></label>
+                    <p class="q-hint">Use the name you'd like us to address you by.</p>
+                    <input type="text" id="name" placeholder="First and last name">
+                    <div class="q-error">Please enter your full name.</div>
+                </div>
+
+                <div class="q-group" id="q-email">
+                    <label class="q-label">Your email address <span class="q-required">*</span></label>
+                    <p class="q-hint">We'll send the workshop confirmation and joining details here.</p>
+                    <input type="email" id="email" placeholder="you@example.com">
+                    <div class="q-error">Please enter a valid email address.</div>
+                </div>
+
+                <div class="q-group" id="q-phone">
+                    <label class="q-label">Your mobile number <span class="q-required">*</span></label>
+                    <p class="q-hint">Used only for reminders or important workshop updates.</p>
+                    <input type="text" id="phone" placeholder="10 digit phone number">
+                    <div class="q-error">Please enter a valid mobile number.</div>
+                </div>
+
+                <div class="q-group" id="q-age">
+                    <label class="q-label">How old are you? <span class="q-required">*</span></label>
+                    <p class="q-hint">This helps us understand the audience joining the session.</p>
+
+                    <div class="options-list">
+
+                        <label class="option-item">
+                            <input type="radio" name="age" value="under 18">
+                            <span class="option-text">Under 18</span>
+                        </label>
+
+                        <label class="option-item">
+                            <input type="radio" name="age" value="18-22">
+                            <span class="option-text">18–22</span>
+                        </label>
+
+                        <label class="option-item">
+                            <input type="radio" name="age" value="23-28">
+                            <span class="option-text">23–28</span>
+                        </label>
+
+                        <label class="option-item">
+                            <input type="radio" name="age" value="29+">
+                            <span class="option-text">29 or above</span>
+                        </label>
+
+                    </div>
+
+                    <div class="q-error">Please select your age range.</div>
+                </div>
+
+
+                <div class="q-group" id="q-status">
+                    <label class="q-label">What's your current status? <span class="q-required">*</span></label>
+                    <p class="q-hint">This helps us tailor the examples during the workshop.</p>
+
+                    <div class="options-list">
+
+                        <label class="option-item">
+                            <input type="radio" name="status" value="School Student">
+                            <span class="option-text">School student</span>
+                        </label>
+
+                        <label class="option-item">
+                            <input type="radio" name="status" value="College Student">
+                            <span class="option-text">College student</span>
+                        </label>
+
+                        <label class="option-item">
+                            <input type="radio" name="status" value="Postgraduate/MBA Student">
+                            <span class="option-text">Postgraduate / MBA student</span>
+                        </label>
+
+                        <label class="option-item">
+                            <input type="radio" name="status" value="Working Professional">
+                            <span class="option-text">Working professional</span>
+                        </label>
+
+                        <label class="option-item">
+                            <input type="radio" name="status" value="other">
+                            <span class="option-text">Other</span>
+                        </label>
+
+                    </div>
+
+                    <div class="q-error">Please select an option.</div>
+                </div>
+
+                <div class="nav-row">
+                    <span></span>
+                    <div style="display:flex;gap:16px;align-items:center;">
+                        <span class="step-indicator">1 of 3</span>
+                        <button type="button" class="btn btn-primary" onclick="nextSection(1)">Continue →</button>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <!-- SECTION 2 -->
+
+            <div class="form-section" id="section-2">
+
+                <div class="section-header">
+                    <div class="section-num">Section 2 of 3</div>
+                    <h2 class="section-title">Quick Context</h2>
+                    <p class="section-note">These questions help us shape the discussion.</p>
+                </div>
+
+                <div class="q-group" id="q-time">
+
+                    <label class="q-label">
+                        The workshop is about 90 minutes on a weekday evening. What's your honest reaction?
+                        <span style="color:var(--ink-muted);font-size:13px;">(Optional)</span>
+                    </label>
+
+                    <p class="q-hint">
+                        There's no right answer here — we just want an honest sense of how it fits your schedule.
+                    </p>
+
+                    <div class="options-list">
+
+                        <label class="option-item">
+                            <input type="radio" name="time" value="Works Fine">
+                            <span class="option-text">That works fine — I can make time for something useful</span>
+                        </label>
+
+                        <label class="option-item">
+                            <input type="radio" name="time" value="Might Leave Early">
+                            <span class="option-text">I might need to leave early but I'll try</span>
+                        </label>
+
+                        <label class="option-item">
+                            <input type="radio" name="time" value="Feels Long">
+                            <span class="option-text">90 minutes feels long</span>
+                        </label>
+
+                        <label class="option-item">
+                            <input type="radio" name="time" value="Not Sure">
+                            <span class="option-text">Not sure yet</span>
+                        </label>
+
+                    </div>
+
+                </div>
+
+
+                <div class="q-group" id="q-doubt">
+
+                    <label class="q-label">
+                        Is there any doubt, confusion, or question related to the stock market that you’d like clarity
+                        on during this
+                        session?
+                        <span class="q-required">*</span>
+                    </label>
+
+                    <p class="q-hint">
+                        You can share anything you're curious about — investing, understanding companies, market basics,
+                        career paths in finance, or any concept you've struggled to understand.
+                        We review these responses before the workshop so we can bring the most useful explanations and
+                        expert
+                        perspectives into the discussion.
+                    </p>
+
+                    <textarea id="doubt"
+                        placeholder="Example: I'm interested in the stock market but I don't understand how people decide which companies are worth investing in."></textarea>
+
+                    <div class="q-error">Please share at least one question or doubt you'd like clarity on.</div>
+
+                </div>
+
+                <div class="nav-row">
+
+                    <button type="button" class="btn btn-ghost" onclick="prevSection(2)">← Back</button>
+
+                    <div style="display:flex;gap:16px;align-items:center;">
+                        <span class="step-indicator">2 of 3</span>
+                        <button type="button" class="btn btn-primary" onclick="nextSection(2)">Continue →</button>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- SECTION 3 -->
+
+            <div class="form-section" id="section-3">
+
+                <div class="section-header">
+                    <div class="section-num">Section 3 of 3</div>
+                    <h2 class="section-title">Final Step</h2>
+                    <p class="section-note">Just one last thing before you submit.</p>
+                </div>
+
+                <div class="q-group" id="q-showup">
+
+                    <label class="q-label">
+                        If you're selected, how likely are you to actually attend the session?
+                        <span class="q-required">*</span>
+                    </label>
+
+                    <div class="options-list">
+
+                        <label class="option-item">
+                            <input type="radio" name="showup" value="Very Likely">
+                            <span class="option-text">Very likely — I'll block my calendar</span>
+                        </label>
+
+                        <label class="option-item">
+                            <input type="radio" name="showup" value="Likely">
+                            <span class="option-text">Likely — barring something urgent</span>
+                        </label>
+
+                        <label class="option-item">
+                            <input type="radio" name="showup" value="Unsure">
+                            <span class="option-text">Unsure — depends on the week</span>
+                        </label>
+
+                        <label class="option-item">
+                            <input type="radio" name="showup" value="Try">
+                            <span class="option-text">I'll try but can't promise</span>
+                        </label>
+
+                    </div>
+
+                    <div class="q-error">Please select an option.</div>
+
+                </div>
+
+
+                <div class="q-group" id="q-extra">
+
+                    <label class="q-label">
+                        Anything else you'd like us to know?
+                        <span style="color:var(--ink-muted);font-size:13px;">(Optional)</span>
+                    </label>
+
+                    <textarea id="extra"
+                        placeholder="Optional — you can share your experience level or what you expect from the session..."></textarea>
+
+                </div>
+
+
+                <div class="nav-row" style="flex-direction:column;gap:12px;align-items:stretch;">
+
+                    <button type="button" id="submit-btn" class="btn btn-primary btn-submit" onclick="submitForm()">
+                        Submit Application →
+                    </button>
+
+                    <button type="button" class="btn btn-ghost" onclick="prevSection(3)">
+                        ← Back
+                    </button>
+
+                </div>
+
+            </div>
+
+
+        </form>
+
+        <!-- ==================== CONFIRMATION ==================== -->
+
+        <div id="confirm-screen" style="display: none;">
+            <div class="confirm-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="#2d7a59" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <polyline points="20 6 9 17 4 12" />
+                </svg>
+            </div>
+            <h2 class="confirm-title">Application Received</h2>
+            <p class="confirm-body">Thank you for applying. We've received your responses and will review them
+                carefully.</p>
+            <div class="confirm-detail">
+                <strong>What happens next?</strong><br>
+                Since this workshop is limited to 15 participants, we read every application before confirming seats.
+                You'll
+                hear back within <strong>2–3 days</strong> — either a confirmation with session details, or a note that
+                we'll
+                keep you on priority for the next batch.<br><br>
+                <strong>Keep an eye on your inbox.</strong> Either way, we'll be in touch.
+            </div>
+            <p style="font-size:13px;color:var(--ink-muted);">— Monetary Shastr Team</p>
+        </div>
+
+
+        <script src="/assets/form.js"></script>
+
+</body>
+
+</html>
